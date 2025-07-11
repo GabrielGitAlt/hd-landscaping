@@ -203,3 +203,7 @@
     padding: 25px 40px 25px 40px;
   }
 }
+
+img:is([sizes="auto" i], [sizes^="auto," i]) {
+  contain-intrinsic-size: 3000px 1500px;
+}
