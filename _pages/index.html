@@ -6,21 +6,11 @@ permalink: /
 ---
 
 <!-- Hero Section -->
-<section
-  class="hero-section position-relative py-5"
-  style="
-    background: var(--hero-gradient);
-    color: var(--text-light);
-    margin-top: 0;
-    padding-top: 5.5rem;
-  "
->
-  <div class="container">
-    <div class="row align-items-center">
+<section class="hero-section position-relative py-5">
+  <div class="container position-relative">
+    <div class="row align-items-center position-relative">
       <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
-        <h1 class="display-3 fw-bold mb-3" style="letter-spacing: 1px">
-          HD Landscaping - Tampa
-        </h1>
+        <h1 class="display-3 fw-bold mb-3">HD Landscaping - Tampa</h1>
         <div
           class="d-flex align-items-center justify-content-center justify-content-lg-start mb-3"
           style="gap: 1.5rem"
@@ -35,13 +25,14 @@ permalink: /
         <div
           class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start"
         >
-          <a href="{{ '/about/' | relative_url }}" class="btn btn-lg btn-main"
+          <a
+            href="{{ '/about/' | relative_url }}"
+            class="btn btn-lg btn-hero-contrast"
             >Learn More</a
           >
           <a
             href="{{ '/contact/' | relative_url }}"
-            class="btn btn-lg btn-main"
-            style="background: var(--main-color-dark)"
+            class="btn btn-lg btn-hero-contrast"
             >Get a Quote</a
           >
         </div>
@@ -50,13 +41,14 @@ permalink: /
         <img
           src="{{ '/assets/images/landing.png' | relative_url }}"
           alt="HD Landscaping Tampa"
-          class="img-fluid rounded shadow-lg"
-          style="background: none; box-shadow: none; padding: 0"
+          class="img-fluid rounded"
         />
       </div>
     </div>
   </div>
 </section>
+
+<!-- Add to style.css: .btn-hero-contrast { background: #fff; color: var(--main-color); border: 2px solid var(--main-color); border-radius: 30px; font-weight: bold; transition: background 0.2s, color 0.2s; } .btn-hero-contrast:hover, .btn-hero-contrast:focus { background: var(--main-color); color: #fff; border-color: var(--main-color); } -->
 
 <!-- Company Info Section -->
 <section class="py-5 bg-white">
@@ -87,7 +79,7 @@ permalink: /
               813-446-1264
             </li>
             <li class="mb-2">
-              <i class="fa-regular fa-envelope me-2" style="color: #ff8800"></i
+              <i class="fa-regular fa-solid me-2" style="color: #ff8800"></i
               >Hdlandscapingtampa@gmail.com
             </li>
             <li class="mb-2">
@@ -128,11 +120,16 @@ permalink: /
         <div
           class="service-card p-4 rounded shadow-sm h-100 text-center bg-white"
         >
-          <i class="fa-solid fa-seedling fa-3x mb-3" style="color: #ff8800"></i>
-          <h5 class="fw-bold mb-2">Landscaping Design</h5>
+          <i class="fa-solid fa-mower fa-3x mb-3" style="color: #ff8800"></i>
+          <h5 class="fw-bold mb-2">
+            <a
+              href="{{ '/services/lawn-mowing/' | relative_url }}"
+              class="text-main text-decoration-none"
+              >Lawn Mowing</a
+            >
+          </h5>
           <p class="text-muted mb-3">
-            Custom landscape design to transform your outdoor space into a
-            beautiful, functional paradise.
+            Professional mowing for a neat, healthy, and beautiful lawn.
           </p>
         </div>
       </div>
@@ -140,53 +137,16 @@ permalink: /
         <div
           class="service-card p-4 rounded shadow-sm h-100 text-center bg-white"
         >
-          <i class="fa-solid fa-broom fa-3x mb-3" style="color: #ff8800"></i>
-          <h5 class="fw-bold mb-2">Lawn Maintenance</h5>
+          <i class="fa-solid fa-scissors fa-3x mb-3" style="color: #ff8800"></i>
+          <h5 class="fw-bold mb-2">
+            <a
+              href="{{ '/services/hedge-trimming/' | relative_url }}"
+              class="text-main text-decoration-none"
+              >Hedge Trimming</a
+            >
+          </h5>
           <p class="text-muted mb-3">
-            Routine mowing, edging, and care to keep your lawn healthy and
-            looking its best all year round.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div
-          class="service-card p-4 rounded shadow-sm h-100 text-center bg-white"
-        >
-          <i class="fa-solid fa-tree fa-3x mb-3" style="color: #ff8800"></i>
-          <h5 class="fw-bold mb-2">Tree & Shrub Care</h5>
-          <p class="text-muted mb-3">
-            Expert trimming, pruning, and care for trees and shrubs to promote
-            healthy growth and safety.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div
-          class="service-card p-4 rounded shadow-sm h-100 text-center bg-white"
-        >
-          <i
-            class="fa-solid fa-faucet-drip fa-3x mb-3"
-            style="color: #ff8800"
-          ></i>
-          <h5 class="fw-bold mb-2">Irrigation Systems</h5>
-          <p class="text-muted mb-3">
-            Installation and repair of efficient irrigation systems to keep your
-            landscape thriving.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div
-          class="service-card p-4 rounded shadow-sm h-100 text-center bg-white"
-        >
-          <i
-            class="fa-solid fa-screwdriver-wrench fa-3x mb-3"
-            style="color: #ff8800"
-          ></i>
-          <h5 class="fw-bold mb-2">Sprinkler Repairs</h5>
-          <p class="text-muted mb-3">
-            Fast, reliable repairs for all types of sprinkler and irrigation
-            systems.
+            Expert trimming and shaping of hedges and bushes for curb appeal.
           </p>
         </div>
       </div>
@@ -195,10 +155,72 @@ permalink: /
           class="service-card p-4 rounded shadow-sm h-100 text-center bg-white"
         >
           <i class="fa-solid fa-leaf fa-3x mb-3" style="color: #ff8800"></i>
-          <h5 class="fw-bold mb-2">Seasonal Cleanups</h5>
+          <h5 class="fw-bold mb-2">
+            <a
+              href="{{ '/services/seasonal-cleanups/' | relative_url }}"
+              class="text-main text-decoration-none"
+              >Seasonal Cleanups</a
+            >
+          </h5>
           <p class="text-muted mb-3">
-            Spring and fall cleanups to keep your property neat, tidy, and ready
-            for the season.
+            Spring and fall cleanups to keep your property tidy and ready for
+            the season.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div
+          class="service-card p-4 rounded shadow-sm h-100 text-center bg-white"
+        >
+          <i class="fa-solid fa-seedling fa-3x mb-3" style="color: #ff8800"></i>
+          <h5 class="fw-bold mb-2">
+            <a
+              href="{{ '/services/sod-installation/' | relative_url }}"
+              class="text-main text-decoration-none"
+              >Sod Installation</a
+            >
+          </h5>
+          <p class="text-muted mb-3">
+            New sod installation for instant, lush green lawns.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div
+          class="service-card p-4 rounded shadow-sm h-100 text-center bg-white"
+        >
+          <i class="fa-solid fa-broom fa-3x mb-3" style="color: #ff8800"></i>
+          <h5 class="fw-bold mb-2">
+            <a
+              href="{{ '/services/mulching/' | relative_url }}"
+              class="text-main text-decoration-none"
+              >Mulching</a
+            >
+          </h5>
+          <p class="text-muted mb-3">
+            Mulch installation to retain moisture and enhance your landscape’s
+            look.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div
+          class="service-card p-4 rounded shadow-sm h-100 text-center bg-white"
+        >
+          <i
+            class="fa-solid fa-ellipsis-h fa-3x mb-3"
+            style="color: #ff8800"
+          ></i>
+          <h5 class="fw-bold mb-2">
+            <a
+              href="{{ '/contact/' | relative_url }}"
+              class="text-main text-decoration-none"
+              >Any Lawn Job</a
+            >
+          </h5>
+          <p class="text-muted mb-3">
+            We handle any lawn job—big or small. Contact us for your custom
+            needs!
           </p>
         </div>
       </div>
@@ -344,15 +366,7 @@ permalink: /
       Contact HD Landscaping - Tampa today for a free quote and let us handle
       all your landscaping needs!
     </p>
-    <a
-      href="{{ '/contact/' | relative_url }}"
-      class="btn btn-lg"
-      style="
-        background: #ff8800;
-        color: #fff;
-        border-radius: 30px;
-        font-weight: bold;
-      "
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn-lg cta-btn"
       >Contact Us</a
     >
   </div>
