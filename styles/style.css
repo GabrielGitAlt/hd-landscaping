@@ -3,11 +3,15 @@
   --main-color: #ff8800;
   --main-color-dark: #cc6e00;
   --main-color-light: #ffb366;
-  --background-cream: #f8f7f3;
+  --main-color-hover: #e67300;
+  --background-cream: #fff7ec;
+  --hero-gradient: linear-gradient(
+    90deg,
+    var(--main-color) 0%,
+    var(--main-color-light) 100%
+  );
   --text-dark: #222;
   --text-light: #fff;
-  --accent-green: #1b6b45;
-  --site-bg: #fff;
 }
 
 /* === Utility Classes === */
@@ -25,7 +29,7 @@
 /* === Section Tweaks === */
 body {
   font-family: "Poppins", "Public Sans", "Manrope", Arial, sans-serif;
-  background: var(--site-bg);
+  background: #fff;
   color: var(--text-dark);
 }
 
@@ -40,26 +44,32 @@ body {
   color: var(--text-dark);
 }
 
+.btn-main,
 .btn-success {
   background-color: var(--main-color) !important;
   border-color: var(--main-color) !important;
   color: var(--text-light) !important;
-  opacity: 1 !important;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.2s, border 0.2s, color 0.2s;
 }
+.btn-main:hover,
 .btn-success:hover,
+.btn-main:focus,
 .btn-success:focus {
-  background-color: var(--main-color-dark) !important;
-  border-color: var(--main-color-dark) !important;
+  background-color: var(--main-color-hover) !important;
+  border-color: var(--main-color-hover) !important;
   color: var(--text-light) !important;
-  opacity: 1 !important;
 }
 
-.bg-success {
+.bg-success,
+.bg-main {
   background-color: var(--main-color) !important;
   color: var(--text-light) !important;
 }
 
-.text-success {
+.text-success,
+.text-main {
   color: var(--main-color) !important;
 }
 
@@ -567,9 +577,10 @@ body {
 .navbar {
   font-size: 1.08rem;
   letter-spacing: 0.01em;
-  background: #fff;
+  background: var(--text-light) !important;
+  border-bottom: 3px solid var(--main-color) !important;
+  box-shadow: none !important;
   border-radius: 0 0 1.25rem 1.25rem;
-  box-shadow: 0 2px 16px rgba(32, 132, 84, 0.07);
 }
 .navbar-nav .nav-link {
   padding-left: 1.25rem !important;
@@ -581,8 +592,16 @@ body {
 }
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-  background: #e6f4ec;
+  background: var(--main-color-light) !important;
   color: var(--main-color) !important;
+}
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+  color: var(--main-color) !important;
+  background: var(--main-color-light) !important;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--main-color-hover) !important;
 }
 .dropdown-menu {
   border-radius: 0.75rem;
@@ -889,6 +908,18 @@ button:disabled {
   padding-right: 0 !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+.hero-section {
+  background: var(--hero-gradient) !important;
+  color: var(--text-light) !important;
+}
+
+/* Remove background from landing image */
+.hero-section img {
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 
 @media (max-width: 767.98px) {

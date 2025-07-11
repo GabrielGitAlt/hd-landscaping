@@ -9,8 +9,10 @@ permalink: /
 <section
   class="hero-section position-relative py-5"
   style="
-    background: linear-gradient(90deg, #ff8800 0%, #ffb366 100%);
-    color: #fff;
+    background: var(--hero-gradient);
+    color: var(--text-light);
+    margin-top: 0;
+    padding-top: 5.5rem;
   "
 >
   <div class="container">
@@ -33,26 +35,13 @@ permalink: /
         <div
           class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start"
         >
-          <a
-            href="{{ '/about/' | relative_url }}"
-            class="btn btn-lg"
-            style="
-              background: #fff;
-              color: #ff8800;
-              border-radius: 30px;
-              font-weight: bold;
-            "
+          <a href="{{ '/about/' | relative_url }}" class="btn btn-lg btn-main"
             >Learn More</a
           >
           <a
             href="{{ '/contact/' | relative_url }}"
-            class="btn btn-lg"
-            style="
-              background: #cc6e00;
-              color: #fff;
-              border-radius: 30px;
-              font-weight: bold;
-            "
+            class="btn btn-lg btn-main"
+            style="background: var(--main-color-dark)"
             >Get a Quote</a
           >
         </div>
@@ -62,7 +51,7 @@ permalink: /
           src="{{ '/assets/images/landing.png' | relative_url }}"
           alt="HD Landscaping Tampa"
           class="img-fluid rounded shadow-lg"
-          style="max-height: 340px; background: #fff; padding: 1rem"
+          style="background: none; box-shadow: none; padding: 0"
         />
       </div>
     </div>
@@ -256,29 +245,90 @@ permalink: /
   </div>
 </section>
 
-<!-- Facebook/Posts Section -->
-<section class="py-5" style="background: #fff7ec">
+<!-- Testimonials Section -->
+<section class="py-5" style="background: var(--background-cream)">
   <div class="container">
-    <h2 class="fw-bold text-center mb-4" style="color: #ff8800">
-      Latest Posts
+    <h2 class="fw-bold text-center mb-5" style="color: var(--main-color)">
+      What Our Clients Say
     </h2>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="p-4 rounded shadow-sm bg-white mb-3">
-          <div class="d-flex align-items-center mb-2">
+    <div class="row justify-content-center g-4">
+      <div class="col-md-6">
+        <div class="p-4 rounded shadow-sm bg-white h-100">
+          <div class="d-flex align-items-center mb-3">
             <i
-              class="fa-brands fa-facebook fa-2x me-3"
-              style="color: #ff8800"
+              class="fa-solid fa-user-check fa-2x me-3"
+              style="color: var(--main-color)"
             ></i>
-            <span class="fw-bold">HD Landscaping - Tampa</span>
+            <span class="fw-bold">Leslie Alexander</span>
           </div>
-          <p class="mb-1">“HD” DID IT!😁😎💯</p>
-          <span class="text-muted" style="font-size: 0.95rem"
-            >See more on our
-            <a href="#" style="color: #ff8800">Facebook page</a></span
+          <p class="mb-2" style="font-size: 1.1rem">
+            “HD Landscaping - Tampa did an amazing job transforming our yard!
+            The team was professional, on time, and exceeded our expectations.
+            Highly recommend!”
+          </p>
+          <div
+            class="d-flex align-items-center"
+            style="color: var(--main-color)"
           >
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
         </div>
-        <!-- Add more post blocks as needed -->
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 rounded shadow-sm bg-white h-100">
+          <div class="d-flex align-items-center mb-3">
+            <i
+              class="fa-solid fa-user-check fa-2x me-3"
+              style="color: var(--main-color)"
+            ></i>
+            <span class="fw-bold">Stephen Hughes</span>
+          </div>
+          <p class="mb-2" style="font-size: 1.1rem">
+            “We had a major irrigation issue and HD Landscaping fixed it the
+            same day. Great service, fair pricing, and very knowledgeable staff.
+            Will use again!”
+          </p>
+          <div
+            class="d-flex align-items-center"
+            style="color: var(--main-color)"
+          >
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="p-4 rounded shadow-sm bg-white h-100 mt-4">
+          <div class="d-flex align-items-center mb-3">
+            <i
+              class="fa-solid fa-user-check fa-2x me-3"
+              style="color: var(--main-color)"
+            ></i>
+            <span class="fw-bold">Maria Lopez</span>
+          </div>
+          <p class="mb-2" style="font-size: 1.1rem">
+            “The team at HD Landscaping is friendly, reliable, and always leaves
+            our property looking beautiful. We appreciate their attention to
+            detail and customer service!”
+          </p>
+          <div
+            class="d-flex align-items-center"
+            style="color: var(--main-color)"
+          >
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
       </div>
     </div>
   </div>
