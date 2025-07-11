@@ -13,7 +13,7 @@ collections:
 
 # General site info
 url: ""
-baseurl: "/demo" # REQUIRED: Set to your repo name for GitHub Pages
+baseurl: "/hd-landscaping" # REQUIRED: Set to your repo name for GitHub Pages
 title: "Paradise Yards & Design LLC"
 description: "Professional landscaping and gardening services"
 keywords: "gardening, landscaping, garden services"
