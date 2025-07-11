@@ -1,0 +1,961 @@
+/* === Color Variables === */
+:root {
+  --primary-green: #208454;
+  --background-cream: #f8f7f3;
+  --text-dark: #222;
+  --text-light: #fff;
+  --accent-green: #1b6b45;
+  --site-bg: #fff;
+}
+
+/* === Utility Classes === */
+.icon-green-mask {
+  filter: invert(40%) sepia(53%) saturate(610%) hue-rotate(95deg)
+    brightness(90%) contrast(86%);
+}
+
+.floating-icon-lg {
+  width: 120px !important;
+  height: auto !important;
+  opacity: 0.6;
+}
+
+/* === Section Tweaks === */
+body {
+  font-family: "Poppins", "Public Sans", "Manrope", Arial, sans-serif;
+  background: var(--site-bg);
+  color: var(--text-dark);
+}
+
+.banner {
+  background: var(--background-cream);
+  position: relative;
+}
+
+.banner__content h1,
+.banner__content h2,
+.banner__content p {
+  color: var(--text-dark);
+}
+
+.btn-success {
+  background-color: var(--primary-green) !important;
+  border-color: var(--primary-green) !important;
+  color: var(--text-light) !important;
+  opacity: 1 !important;
+}
+.btn-success:hover,
+.btn-success:focus {
+  background-color: var(--accent-green) !important;
+  border-color: var(--accent-green) !important;
+  color: var(--text-light) !important;
+  opacity: 1 !important;
+}
+
+.bg-success {
+  background-color: var(--primary-green) !important;
+  color: var(--text-light) !important;
+}
+
+.text-success {
+  color: var(--primary-green) !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-dark {
+  color: #222 !important;
+}
+
+.footer {
+  background: #222;
+  color: #fff;
+}
+
+.footer .text-muted {
+  color: #bbb !important;
+}
+
+.footer .border-top {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.floating-icon {
+  pointer-events: none;
+  /* opacity: 0.8; */
+}
+
+/* Floating icon positions from inline styles */
+.floating-shovel {
+  position: absolute;
+  left: 1%;
+  top: 5%;
+  z-index: 1;
+}
+.floating-leaf {
+  width: 100px !important;
+  position: absolute;
+  right: 52%;
+  top: 10%;
+  z-index: 1;
+}
+.floating-plant {
+  position: absolute;
+  left: 35%;
+  bottom: 0%;
+  z-index: 1;
+}
+
+.floating-sprinkler-left {
+  position: absolute;
+  left: 3%;
+  bottom: 0%;
+  z-index: 1;
+}
+
+/* Responsive tweaks for floating icons */
+@media (max-width: 1199.98px) {
+  .floating-icon {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .floating-icon-lg {
+    width: 70px !important;
+  }
+}
+
+/* More vertical padding for banner on mobile */
+@media (max-width: 767.98px) {
+  .banner {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  section,
+  .footer,
+  header {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .navbar {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Hide scroll to top button by default, show when needed (JS toggles display) */
+#scrollToTop {
+  display: none;
+}
+
+/* Make all icons green by default unless overridden */
+.icon,
+.fa,
+.fas,
+.far,
+.fab,
+.fal,
+.fad,
+.fa-solid,
+.fa-regular,
+.fa-brands {
+  color: var(--primary-green) !important;
+}
+
+/* But allow .text-white, .text-dark, .text-success, etc. to override */
+.text-white {
+  color: #fff !important;
+}
+.text-dark {
+  color: #222 !important;
+}
+.text-success {
+  color: var(--primary-green) !important;
+}
+
+/* Move carousel arrows further to the sides for Our Work section */
+.work-carousel-control {
+  width: 6.5rem;
+}
+.work-carousel-control.carousel-control-prev {
+  left: -5rem;
+}
+.work-carousel-control.carousel-control-next {
+  right: -5rem;
+}
+@media (max-width: 991.98px) {
+  .work-carousel-control {
+    width: 3.5rem;
+  }
+  .work-carousel-control.carousel-control-prev {
+    left: -2.5rem;
+  }
+  .work-carousel-control.carousel-control-next {
+    right: -2.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  /* Only show the first image in each carousel-item on mobile */
+  .our-work .carousel-item .col-6:not(:first-child),
+  .our-work .carousel-item .col-md-3:not(:first-child) {
+    display: none !important;
+  }
+  .work-carousel-control {
+    width: 2rem;
+  }
+  .work-carousel-control.carousel-control-prev {
+    left: -1rem;
+  }
+  .work-carousel-control.carousel-control-next {
+    right: -1rem;
+  }
+}
+
+/* More prominent counter cards in About section */
+.about .border-success {
+  border-width: 2px !important;
+  border-color: var(--primary-green) !important;
+}
+.about .shadow-lg {
+  box-shadow: 0 0.5rem 2rem rgba(32, 132, 84, 0.25),
+    0 0.125rem 0.25rem rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Ensure play button in testimonials section is a perfect circle and icon is centered */
+.testimonials .rounded-circle {
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.testimonials .fa-play {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Testimonial video background and overlay */
+.testimonial-video-wrapper {
+  height: 50rem;
+  max-width: 100%;
+  min-width: 12rem;
+  min-height: 12rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0.5rem 2rem rgba(32, 132, 84, 0.15),
+    0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+}
+.testimonial-video-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.testimonial-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(34, 34, 34, 0.55);
+  z-index: 2;
+}
+.testimonial-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1.5rem rgba(32, 132, 84, 0.18);
+  transition: box-shadow 0.2s, background 0.2s;
+  font-size: 2rem;
+}
+.testimonial-play-btn:hover,
+.testimonial-play-btn:focus {
+  background: #e6f4ec;
+  box-shadow: 0 1rem 2.5rem rgba(32, 132, 84, 0.25);
+  text-decoration: none;
+}
+.testimonial-play-btn i {
+  margin: 0;
+  color: var(--primary-green) !important;
+}
+@media (max-width: 575.98px) {
+  .testimonial-video-wrapper {
+    width: 12rem;
+    height: 12rem;
+    min-width: 8rem;
+    min-height: 8rem;
+    border-radius: 0.75rem;
+  }
+  .testimonial-play-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 1.3rem;
+  }
+}
+
+.sticky-top {
+  position: sticky !important;
+  top: 0;
+  z-index: 1030;
+  background: #fff;
+}
+
+/* --- Testimonial Review Card Layout --- */
+.testimonial-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(32, 132, 84, 0.1),
+    0 1.5px 4px 0 rgba(0, 0, 0, 0.06);
+  border: 1.5px solid #e2e8f0;
+  padding: 2rem 2rem 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border: none;
+  flex-wrap: wrap;
+}
+.testimonial-card .testimonial-avatar {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimonial-card .testimonial-header {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.testimonial-card .testimonial-info {
+  flex: 1 1 auto;
+}
+.testimonial-card .testimonial-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.15rem;
+  color: #222;
+}
+.testimonial-card .testimonial-title {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.testimonial-card .testimonial-stars {
+  color: #7ac142;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  margin-left: auto;
+  margin-top: 0 !important;
+  align-self: center !important;
+}
+.testimonial-card .testimonial-text {
+  color: #555;
+  font-size: 1.08rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  flex-basis: 100%;
+  margin-left: 0;
+}
+@media (max-width: 575.98px) {
+  .testimonial-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem 1rem 1rem 1rem;
+    gap: 1rem;
+  }
+  .testimonial-card .testimonial-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .testimonial-card .testimonial-header {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+  }
+  .testimonial-card .testimonial-stars {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-video-wrapper {
+    margin-right: 2.5rem;
+  }
+}
+
+/* Refactored Testimonial Video Section */
+.testimonial-flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.testimonial-video-simple {
+  position: relative;
+  width: 50%;
+  max-width: 28rem;
+  min-width: 14rem;
+  aspect-ratio: 5/7;
+  height: auto;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.testimonial-video-bg-simple {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/video.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.testimonial-video-overlay-simple {
+  position: absolute;
+  inset: 0;
+  background: rgba(34, 34, 34, 0.55);
+  z-index: 2;
+}
+.testimonial-play-btn-simple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1.5rem rgba(32, 132, 84, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--primary-green);
+  transition: box-shadow 0.2s, background 0.2s;
+  text-decoration: none;
+}
+.testimonial-play-btn-simple:hover,
+.testimonial-play-btn-simple:focus {
+  background: #e6f4ec;
+  box-shadow: 0 1rem 2.5rem rgba(32, 132, 84, 0.25);
+}
+.testimonial-play-btn-simple i {
+  color: var(--primary-green) !important;
+}
+.testimonial-content-simple {
+  flex: 1 1 0%;
+  min-width: 0;
+  width: 50%;
+  max-width: 50%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 991.98px) {
+  .testimonial-video-simple {
+    display: none;
+  }
+  .testimonial-flex-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .testimonial-content-simple {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.final-cta {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.final-cta-inner {
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 2rem;
+}
+.final-cta h2,
+.final-cta p.lead {
+  max-width: none;
+}
+@media (max-width: 767.98px) {
+  .final-cta {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .final-cta-inner {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Footer section max-width, allow shrinking */
+.footer-section {
+  max-width: 350px;
+  width: 100%;
+}
+.footer-about {
+  max-width: 350px;
+}
+
+#scrollToTop i {
+  color: #fff !important;
+}
+
+.footer .row {
+  column-gap: 4rem;
+}
+
+.about-img-rounded {
+  border-radius: 1.25rem;
+  opacity: 0.92;
+}
+
+/* --- Navbar Dropdown on Hover (Desktop) --- */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+/* --- Modern Navbar Styles --- */
+.navbar {
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+  background: #fff;
+  border-radius: 0 0 1.25rem 1.25rem;
+  box-shadow: 0 2px 16px rgba(32, 132, 84, 0.07);
+}
+.navbar-nav .nav-link {
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-radius: 0.75rem;
+  transition: background 0.18s, color 0.18s;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  background: #e6f4ec;
+  color: var(--primary-green) !important;
+}
+.dropdown-menu {
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 32px rgba(32, 132, 84, 0.13);
+  border: none;
+  margin-top: 0.5rem;
+  min-width: 11rem;
+}
+.dropdown-item {
+  border-radius: 0.5rem;
+  transition: background 0.18s, color 0.18s;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: #e6f4ec;
+  color: var(--primary-green) !important;
+}
+/* Custom chevron for dropdown toggle */
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+.navbar .dropdown-toggle .fa-chevron-down {
+  font-size: 0.95em;
+  margin-left: 0.45em;
+  vertical-align: middle;
+  color: #888;
+  transition: color 0.18s;
+}
+.navbar .dropdown-toggle:hover .fa-chevron-down,
+.navbar .dropdown-toggle:focus .fa-chevron-down {
+  color: var(--primary-green);
+}
+
+/* ——— Layout shell ——— */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-viewport {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+/* ——— Items ——— */
+.carousel-item {
+  flex: 0 0 calc(100% - 8px); /* 1‑per‑view default */
+  margin: 0 4px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px 0 rgba(32, 132, 84, 0.13),
+    0 1.5px 4px 0 rgba(0, 0, 0, 0.06);
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+@media (min-width: 600px) {
+  .carousel-item img {
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .carousel-item img {
+    height: 260px;
+  }
+}
+@media (max-width: 599px) {
+  .carousel-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .carousel-item {
+    width: 80vw;
+    max-width: 100%;
+    height: 240px;
+  }
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+@media (min-width: 600px) {
+  .carousel-item {
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+@media (min-width: 900px) {
+  .carousel-item {
+    flex: 0 0 calc(33.333% - 8px);
+  }
+}
+@media (min-width: 1200px) {
+  .carousel-item {
+    flex: 0 0 calc(25% - 8px);
+  }
+}
+#prevBtn,
+#nextBtn {
+  min-width: 60px;
+  min-height: 40px;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(32, 132, 84, 0.08);
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.carousel-container .btn {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.25rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-container .btn i {
+  color: #fff !important;
+  font-size: 2.5rem;
+}
+
+.carousel-container .btn:disabled,
+.carousel-container .btn:disabled i {
+  opacity: 1 !important;
+  color: #fff !important;
+  filter: none !important;
+}
+
+@media (max-width: 767.98px) {
+  .footer .row {
+    flex-direction: column !important;
+  }
+  .footer-section {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .footer {
+    text-align: center;
+  }
+  section,
+  .footer {
+    text-align: center;
+  }
+  section h1,
+  section h2,
+  section h3,
+  section h4,
+  section h5,
+  section h6,
+  .footer h1,
+  .footer h2,
+  .footer h3,
+  .footer h4,
+  .footer h5,
+  .footer h6 {
+    text-align: center;
+  }
+  .d-flex.align-items-center,
+  .d-flex.align-items-center.justify-content-center {
+    justify-content: center !important;
+  }
+  .banner__content .d-flex {
+    justify-content: center !important;
+  }
+  /* Do not center testimonial cards on mobile */
+  .testimonial-card,
+  .testimonial-card * {
+    text-align: left !important;
+  }
+  .testimonial-content-simple {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+  .testimonial-header {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* Remove all custom navbar centering and flex rules for mobile */
+  .navbar-nav,
+  .navbar-collapse,
+  .navbar-brand,
+  .navbar-nav .nav-link,
+  .navbar-nav .dropdown-toggle {
+    justify-content: unset !important;
+    text-align: unset;
+    align-items: unset !important;
+    margin-left: unset;
+    margin-right: unset;
+    display: unset;
+    width: unset;
+    padding-left: unset !important;
+    padding-right: unset !important;
+    margin: unset;
+    flex-direction: unset;
+  }
+  .navbar-nav {
+    align-items: center;
+  }
+  .navbar-nav .nav-link,
+  .navbar-nav .dropdown-toggle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto;
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 1.1rem;
+  }
+  .navbar-nav .dropdown-toggle .fa-chevron-down {
+    margin-left: 0.45em;
+    position: unset;
+    top: unset;
+  }
+  .navbar-nav .nav-item {
+    margin: 1rem 0.5rem;
+  }
+}
+
+/* Contact page space efficiency and seamless blending */
+.contact-section-bg {
+  background: #f8faf6;
+}
+
+.contact-section-inner {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Remove box shadows from form and info blocks */
+.shadow-lg,
+.shadow,
+.box-shadow {
+  box-shadow: none !important;
+}
+
+/* Make sure both blocks are stacked and max-width is controlled */
+@media (max-width: 991.98px) {
+  .contact-section-inner {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+/* Make the contact info list more compact */
+.contact-info-list li {
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+/* Remove background from info block */
+.contact-info-block {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Make the section titles closer together */
+.contact-section-inner h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Reduce vertical spacing on mobile */
+@media (max-width: 575.98px) {
+  .contact-section-inner {
+    padding: 0 0.5rem;
+  }
+  .contact-section-inner h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .contact-info-list li {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.service-hero {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+  .service-hero {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+/* === About Page Custom Styles === */
+.about-container {
+  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (max-width: 991.98px) {
+  .about-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+.about-story-row {
+  min-height: 100%;
+}
+.about-story-img-col {
+  height: 100%;
+}
+.about-story-img {
+  max-width: 370px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 480px;
+}
+.about-approach-row {
+  min-height: 100%;
+}
+.about-approach-img-col {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.about-approach-img {
+  max-width: 370px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 480px;
+}
+.service-areas-section {
+  margin-bottom: 0;
+}
+.contact-cta-section {
+  background: var(--background-cream);
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+
+/* Make contact form text boxes more noticeable */
+.contact-section-inner .form-control {
+  border: 2px solid #bbb !important; /* Gray border */
+  box-shadow: 0 0 0 0.1rem rgba(32, 132, 84, 0.1); /* Light green shadow */
+}
+.contact-section-inner .form-control:focus {
+  border-color: #1b6b45 !important; /* Accent green on focus */
+  box-shadow: 0 0 0 0.2rem rgba(32, 132, 84, 0.18); /* Slightly stronger green shadow on focus */
+}

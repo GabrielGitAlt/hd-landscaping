@@ -1,0 +1,263 @@
+<header class="header">
+  <!-- Top Header -->
+  <div class="header__top d-none d-lg-block bg-white">
+    <div class="container">
+      <div class="row align-items-center py-2 flex-nowrap">
+        <div class="col-9">
+          <ul class="list-unstyled d-flex flex-wrap mb-0">
+            <li class="me-4 d-flex align-items-center">
+              <i class="fa-solid fa-phone me-2 text-success icon"></i>
+              <span>+1 813-263-9589</span>
+            </li>
+            <li class="me-4 d-flex align-items-center">
+              <i class="fa-regular fa-envelope me-2 text-success icon"></i>
+              <span>paradiseyardsdesignllc@gmail.com</span>
+            </li>
+            <li class="d-flex align-items-center">
+              <i class="fa-solid fa-location-dot me-2 text-success icon"></i>
+              <span>Florida, United States</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3 text-end">
+          <span class="me-2">Socials:</span>
+          <a
+            href="https://www.facebook.com/profile.php?id=61550781875360"
+            class="text-dark ms-2"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-square-facebook icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Navigation Bar (Sticky) -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">
+      <img
+        src="{{ '/assets/images/logo_short.svg' | relative_url }}"
+        alt="Paradise Yards Logo Short"
+        height="50"
+        class="d-block d-lg-none"
+      />
+      <img
+        src="{{ '/assets/images/logo_long.svg' | relative_url }}"
+        alt="Paradise Yards Logo Long"
+        height="80"
+        class="d-none d-lg-block"
+      />
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+        {% assign is_es = page.url | slice: 0, 4 %} {% if is_es == '/es/' %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ '/es/' | relative_url }}">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ '/es/about/' | relative_url }}"
+            >Sobre Nosotros</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-leaf me-1"></i> Servicios
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/es/services/garden-design/' | relative_url }}"
+              >
+                <i class="fa-solid fa-seedling me-2 text-success"></i> Diseño de
+                Jardines
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/es/services/garden-plantation/' | relative_url }}"
+              >
+                <i class="fa-solid fa-tree me-2 text-success"></i> Plantación de
+                Jardines
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/es/services/garden-maintenance/' | relative_url }}"
+              >
+                <i class="fa-solid fa-broom me-2 text-success"></i>
+                Mantenimiento de Jardines
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/es/services/irrigation-systems/' | relative_url }}"
+              >
+                <i class="fa-solid fa-water me-2 text-success"></i> Sistemas de
+                Riego
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/es/services/tree-trimming/' | relative_url }}"
+              >
+                <i class="fa-solid fa-scissors me-2 text-success"></i> Poda de
+                Árboles
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/es/services/sprinkler-system-repairs/' | relative_url }}"
+              >
+                <i class="fa-solid fa-screwdriver-wrench me-2 text-success"></i>
+                Reparación de Sistemas de Riego
+              </a>
+            </li>
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ '/about/' | relative_url }}">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-leaf me-1"></i> Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/services/garden-design/' | relative_url }}"
+              >
+                <i class="fa-solid fa-seedling me-2 text-success"></i> Garden
+                Design
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/services/garden-plantation/' | relative_url }}"
+              >
+                <i class="fa-solid fa-tree me-2 text-success"></i> Garden
+                Plantation
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/services/garden-maintenance/' | relative_url }}"
+              >
+                <i class="fa-solid fa-broom me-2 text-success"></i> Garden
+                Maintenance
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/services/irrigation-systems/' | relative_url }}"
+              >
+                <i class="fa-solid fa-water me-2 text-success"></i> Irrigation
+                Systems
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/services/tree-trimming/' | relative_url }}"
+              >
+                <i class="fa-solid fa-scissors me-2 text-success"></i> Tree
+                Trimming
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="{{ '/services/sprinkler-system-repairs/' | relative_url }}"
+              >
+                <i class="fa-solid fa-screwdriver-wrench me-2 text-success"></i>
+                Sprinkler System Repairs
+              </a>
+            </li>
+          </ul>
+        </li>
+        {% endif %}
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="langDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-globe me-1"></i> {% if is_es == '/es/'
+            %}Lenguaje{% else %}Language{% endif %}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="langDropdown">
+            <li>
+              <a
+                class="dropdown-item"
+                href="{{ page.url | replace_first:'/es','' | relative_url }}"
+                >English</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="{{ '/es' | append: page.url | relative_url }}"
+                >Español</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center mb-2 mb-lg-0" style="gap: 0.5rem">
+        {% if is_es == '/es/' %}
+        <a href="{{ '/es/contact/' | relative_url }}" class="btn btn-success"
+          >Contáctenos</a
+        >
+        {% else %}
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn-success"
+          >Contact Us</a
+        >
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</nav>
